@@ -63,14 +63,13 @@ form{
 	
 }
 
-.search{
+#search{
 	margin-top: 20px;
 	width: 30%;
 	margin: 15px;
 	background-color: #1E0012;
 	border: 1px solid #1E0012;
 	padding: 12px 20px;
-	font-family: 'Montserrat', sans-serif;
 }
 
 input{
