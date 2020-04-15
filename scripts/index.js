@@ -3,7 +3,7 @@ var long = 0.0;
 
 
 function geocoder(x){
-	var request = 'https://api.opencagedata.com/geocode/v1/json?q='+x+'&key=96119d26deed46a79c7761ce539a8e61'
+	var request = 'https://api.opencagedata.com/geocode/v1/json?q='+x+'&key=96119d26deed46a79c7761ce539a8e61' ;
 	fetch(request)
 	.then(function(response) {
 		return response.json();
@@ -21,7 +21,7 @@ function geocoder(x){
 
 
 function weerdata() {
-	var request = 'http://api.weatherbit.io/v2.0/current?key=b0f43d96f79b42cf909d995e239182e7&lang=nl&lat='+lat+'&lon='+long
+	var request = 'https://api.weatherbit.io/v2.0/current?key=b0f43d96f79b42cf909d995e239182e7&lang=nl&lat='+lat+'&lon='+long ;
 	fetch(request)
 	.then(function(response) {
 		return response.json();
