@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+		<script src="scripts/index.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="styles/layout.css">
+		<title>Landing</title>
+	</head>
+	<body>
+		<div class="container">
+			<h3>Landing</h3>
+			 <div id="plaatsnaam">
+		        <form action="#" onsubmit="return nieuwestad(this);">
+		            <label for="fname">Location</label><br>
+		            <input type="text" id="fname" name="fname" placeholder="Cityname"><br>
+		            <input class="search" type="submit" value="Search">
+		        </form>
+		    </div>
+
+		    <div id="weer">
+		    	<p class="weertitel">The weather</p>
+				<div id="weer_temperatuur"></div>
+				<div id="weer_luchtdruk"></div>
+				<div id="weer_windsnelheid"></div>
+				<div id="weer_bewolking"></div>	
+			</div>
+
+			<div id="kaart">
+				<p class="maptitle">The map</p>
+				<div id="map"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,239 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 15pt;
+	color: white;
+	background-image: url("fotos/background.png");
+  	background-repeat: no-repeat;
+}
+
+/*CSS GRID VOOR GEHELE CODE*/
+.container{
+  	display: grid;
+  	min-height: 100%;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: 80px 250px 225px 400px;
+  	grid-template-areas: 
+  	"header"
+  	"form"
+  	"weather"
+  	"maps"
+  	;
+}
+
+h3{
+	grid-area: header;
+	margin: 20px;
+
+}
+
+#plaatsnaam{
+	grid-area: form;
+	grid-column: 1;
+}
+
+#weer{
+	grid-area: weather;
+	grid-column: 1;
+}
+
+#kaart{
+	grid-area: maps;
+	grid-column: 1;
+
+}
+
+#plaatsnaam, #weer, #kaart{
+	background-color: #C73849;
+	border: 1px solid #C73849;
+	border-radius: 15px;
+	margin: 0px 10px 20px;
+}
+
+/*HET FORMULIERVELD*/
+form{
+  margin: 15px;
+}
+
+#fname{
+	background-color: #3B0F15;
+	border: 1px solid #3B0F15;
+	opacity: 0.6;
+	width: 50%;
+	margin-top: 30px;
+	
+}
+
+.search{
+	margin-top: 20px;
+	width: 30%;
+}
+
+input{
+	background-color: #1E0012;
+	border: 1px solid #1E0012;
+	border-radius: 15px;
+	color: white;
+	font-size: 10pt;
+	padding: 12px 20px;
+}
+
+
+/*HET WEER*/
+#weer{
+  	display: grid;
+ 	grid-template-columns: 3fr 1fr 3fr;
+ 	grid-template-rows: 70px 80px 60px;
+ 	padding: 0px 15px 15px 15px;
+ 	grid-template-areas: 
+  	"eerste"
+  	"tweede"
+  	"derde"
+  	;
+}
+
+.weertitel{
+	grid-area: eerste;
+	grid-column: 1;
+}
+
+#weer_temperatuur{
+	grid-area: tweede;
+	grid-column: 1;
+}
+
+#weer_luchtdruk{
+	grid-area: derde;
+	grid-column: 1;
+
+}
+
+#weer_windsnelheid{
+	grid-area: tweede;
+	grid-column: 3;
+}
+
+#weer_bewolking{
+	grid-area: derde;
+	grid-column: 3;
+}
+
+#weer_temperatuur, #weer_luchtdruk, 
+#weer_windsnelheid,#weer_bewolking{
+	font-size: 10pt;
+}
+
+#map{
+	border-radius: 15px;
+	margin: 30px 15px 15px 15px;
+	width: 90%;
+	height: 70%;
+}
+
+.maptitle{
+	margin: 15px;
+
+}
+
+
+/*DE MEDIA BBREAKPOINTS*/
+@media only screen and (min-width: 768px){
+	.container{
+	  	display: grid;
+	  	grid-template-rows: 80px 250px 225px 450px;
+	}
+
+ 	#fname{
+  		width: 70%;
+  	}
+
+  	.search{
+  		width: 20%;
+  	}
+
+  	#weer{
+	  	display: grid;
+	 	grid-template-columns: 3fr 3fr 2fr;
+	 }
+
+	#weer_windsnelheid, #weer_bewolking{
+		grid-column: 2;
+	}
+
+	#map{
+		width: 95%;
+		height: 80%;
+	}
+
+
+}
+
+
+@media only screen and (min-width: 1280px){
+	.container{
+	  	display: grid;
+	  	min-height: 100%;
+	  	grid-template-columns: 1fr 1fr;
+	  	grid-template-rows: 80px 250px 600px;
+	}
+
+	#plaatsnaam{
+		grid-area: form;
+		grid-column: 1;
+	}
+
+	#weer{
+		grid-area: form;
+		grid-column: 2;
+	}
+
+	#kaart{
+		grid-area: weather;
+		grid-column: 1 / span 2;
+	}
+
+	#map{
+		width: 97.5%;
+		height: 80%;
+	}
+}
+
+@media only screen and (min-width: 1920px){
+	#weer{
+  		display: grid;
+ 		grid-template-columns: 3fr 1fr 3fr;
+	}
+
+	.weertitel{
+		grid-area: eerste;
+		grid-column: 1;
+	}
+
+	#weer_temperatuur{
+		grid-area: tweede;
+		grid-column: 1;
+	}
+
+	#weer_luchtdruk{
+		grid-area: derde;
+		grid-column: 1;
+
+	}
+
+	#weer_windsnelheid{
+		grid-area: tweede;
+		grid-column: 3;
+	}
+
+	#weer_bewolking{
+		grid-area: derde;
+		grid-column: 3;
+	}
+	
+}
+
+
+
+
+
+
+
