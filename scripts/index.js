@@ -47,9 +47,9 @@ function geocoder(x) {
         var lat = data1.data[0].lat;
         //Koppel de opgehaalde data aan de HTML
         document.getElementById('weer_temperatuur').innerHTML = 'Temperature: <br>' + temperatuur + '&#176;C <br>';
-        document.getElementById('weer_luchtdruk').innerHTML = 'Airpressure: <br>' + luchtdruk;
-        document.getElementById('weer_windsnelheid').innerHTML = 'Windspeed:<br>' + windsnelheid;
-        document.getElementById('weer_bewolking').innerHTML = 'Cloud cover:<br>' + bewolking;
+        document.getElementById('weer_luchtdruk').innerHTML = 'Airpressure: <br>' + luchtdruk + ' millibar';
+        document.getElementById('weer_windsnelheid').innerHTML = 'Windspeed:<br>' + windsnelheid + ' m/s';
+        document.getElementById('weer_bewolking').innerHTML = 'Cloud cover:<br>' + bewolking + ' %';
         return { lat, long };
     })
     .then((response) => {
