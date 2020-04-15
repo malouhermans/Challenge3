@@ -66,14 +66,17 @@ form{
 .search{
 	margin-top: 20px;
 	width: 30%;
-	margin: 15px;
+	/*margin: 15px;
 	background-color: #1E0012;
 	border: 1px solid #1E0012;
-	padding: 12px 20px;
+	padding: 12px 20px;*/
 }
 
 input{
+	background-color: #1E0012;
+	border: 1px solid #1E0012;
 	border-radius: 15px;
+	margin: 15px;
 	color: white;
 	font-size: 10pt;
 	padding: 12px 20px;
@@ -126,6 +129,7 @@ input{
 
 #map{
 	margin: 30px 15px 15px 15px;
+	border-radius: 15px;
 	width: 90%;
 	height: 70%;
 }
