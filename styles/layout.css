@@ -66,6 +66,7 @@ form{
 .search{
 	margin-top: 20px;
 	width: 30%;
+	margin: 15px;
 }
 
 input{
@@ -123,6 +124,7 @@ input{
 }
 
 #map{
+	border: 1px solid;
 	border-radius: 15px;
 	margin: 30px 15px 15px 15px;
 	width: 90%;

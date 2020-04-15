@@ -4,19 +4,24 @@ var long = 0.0;
 
 function geocoder(x){
 	var request = 'https://api.opencagedata.com/geocode/v1/json?q='+x+'&key=96119d26deed46a79c7761ce539a8e61' ;
-	fetch(request)
+	
+	let lat1, long1 = fetch(request)
 	.then(function(response) {
+		if(!response.ok) throw Error(response.statusText);
 		return response.json();
 	})
-	// do something with response
+
 	.then(function(response) {
-		// show full JSON object
+		
 		console.log(response);
 		var data1 = response;
 		long = data1.results[0].geometry.lng;
 		lat = data1.results[0].geometry.lat;
-	});
-
+		console.log(lat, long)
+	})
+	
+	.then(function(response){return {lat, long};}); 
+return {lat1, long1};
 }
 
 
@@ -26,9 +31,8 @@ function weerdata() {
 	.then(function(response) {
 		return response.json();
 	})
-	// do something with response
+
 	.then(function(response) {
-		// show full JSON object
 		console.log(response);
 		var data1 = response;
 		console.log(data1.data[0].weather.description);
@@ -44,8 +48,6 @@ function weerdata() {
 		document.getElementById('weer_bewolking').innerHTML = 'Bewolking:<br>' + bewolking;
 	});
 }
-
-
 
 
 function map() {
@@ -71,7 +73,7 @@ function nieuwestad() {
 
 
 window.onload = function (){
-	geocoder('Den Haag');
+	console.log(geocoder('Den Haag'));
 	weerdata();
 	map();
 };

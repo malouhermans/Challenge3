@@ -6,17 +6,18 @@
 		<script src="scripts/index.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="styles/layout.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 		<title>Landing</title>
 	</head>
 	<body>
 		<div class="container">
 			<h3>Landing</h3>
 			 <div id="plaatsnaam">
-		        <form action="#" onsubmit="return nieuwestad(this);">
-		            <label for="fname">Location</label><br>
-		            <input type="text" id="fname" name="fname" placeholder="Cityname"><br>
-		            <input class="search" type="submit" value="Search">
-		        </form>
+				<form>
+    				<label for="fname">Location</label><br>
+    				<input type="text" name="fname" id="fname">
+ 				</form>
+ 				<input class="search" type="submit" onclick="nieuwestad();"><br/>
 		    </div>
 
 		    <div id="weer">
