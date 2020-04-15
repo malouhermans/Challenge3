@@ -67,11 +67,11 @@ form{
 	margin-top: 20px;
 	width: 30%;
 	margin: 15px;
+	background-color: #1E0012;
+	border: 1px solid #1E0012;
 }
 
 input{
-	background-color: #1E0012;
-	border: 1px solid #1E0012;
 	border-radius: 15px;
 	color: white;
 	font-size: 10pt;
